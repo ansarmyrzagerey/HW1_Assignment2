@@ -21,23 +21,32 @@ public class ArrayMain {
             System.out.println("2 - Recieve a form of the array where every value has been decreased by the mean value.");
             System.out.println("3 - Get the sums of the odd-indexed and even-indexed integer values in the array.");
             System.out.println("4 - Exit");
+            System.out.print("Please enter your choice: ");
             int userInput = in.nextInt();
             if (userInput == 1) 
             {
-                
+                int minimumNumber = MinAndMax.Min(array);
+                int maximumNumber = MinAndMax.Max(array);
+                System.out.println("The minimum number is: " + minimumNumber);
+                System.out.println("The maximum number is: " + maximumNumber);
             }
             else if (userInput == 2) 
             {
-            String differences = AverageArray.averageArray(array);
-            System.out.println(differences);                
+                String differences = AverageArray.averageArray(array);
+                System.out.println("The differences for each element from the mean are: " + differences + "\n");                
             }
             else if (userInput == 3) 
             {
+                int oddSum = SumsFinder.OddSum(array);
+                int evenSum = SumsFinder.EvenSum(array);
 
+                System.out.println("The odd sum is: " + oddSum);
+                System.out.println("The even sum is: " + evenSum);
             }
             else if (userInput == 4) 
             {
                 isLooping = false;
+                System.out.println("Goodbye!");
             }
         }
 
