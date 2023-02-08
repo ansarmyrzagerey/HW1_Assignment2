@@ -1,14 +1,19 @@
-package HW1_Assignment2;
+
+import java.util.Scanner;
+import java.util.Arrays;
 
 public class ArrayMain {
+    
     public static void main(String[] args) 
     {
         Scanner in = new Scanner(System.in);
         boolean isLooping = true; 
+        
         System.out.println("Hello and welcome to our array creation program!");
-        System.out.println("How many elements would you like your array to have? ");
+        System.out.print("How many elements would you like your array to have? ");
         int arraySize = in.nextInt();
-        int[] array = createArray(arraySize);
+        int[] array = ArrayCreation.createArray(arraySize);
+        System.out.println(Arrays.toString(array)+ "\n");
 
         while (isLooping) {
             System.out.println("Please choose one of the following options using the integers 1 through 3, 4 to exit:");
@@ -23,7 +28,8 @@ public class ArrayMain {
             }
             else if (userInput == 2) 
             {
-            AverageArray.averageArray(array);                
+            String differences = AverageArray.averageArray(array);
+            System.out.println(differences);                
             }
             else if (userInput == 3) 
             {
@@ -32,7 +38,6 @@ public class ArrayMain {
             else if (userInput == 4) 
             {
                 isLooping = false;
-                //test
             }
         }
 

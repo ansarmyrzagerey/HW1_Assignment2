@@ -1,4 +1,4 @@
-package HW1_Assignment2;
+
 
 public class ArrayCreation{
     public static int[] createArray(int x) {
