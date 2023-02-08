@@ -10,7 +10,7 @@ public class AverageArray {
 
         int sum = 0;
         int average;
-        String difference = "{ ";
+        String difference = "{";
 
         for(int element : array)
         {
@@ -19,18 +19,18 @@ public class AverageArray {
 
         average = sum / array.length;
 
-        for(int element : array)
+        for(int i = 0; i < array.length - 1; i++)
         {
-            difference = difference + (average - element) + " ,";
+            difference = difference + (average - array[i]) + ", ";
         }
 
-        difference = difference + " }";
+        difference = difference + (average - array[array.length - 1]) + "}";
 
         return difference;
     }
 
     public static void main(String[] args) {
-        int[] myIntArray = {1, 2, 3, 6};
+        int[] myIntArray = {1, 2, 3, 4, 5,};
     
         System.out.println(averageArray(myIntArray));
     }
