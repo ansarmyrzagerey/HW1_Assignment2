@@ -1,5 +1,4 @@
 package HW1_Assignment2;
-import java.util.Scanner;
 
 public class ArrayCreation{
     public static int[] createArray(int x) {
