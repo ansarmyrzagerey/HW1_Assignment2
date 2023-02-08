@@ -32,6 +32,7 @@ public class ArrayMain {
             else if (userInput == 4) 
             {
                 isLooping = false;
+                //test
             }
         }
 
