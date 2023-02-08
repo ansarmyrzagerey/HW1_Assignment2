@@ -2,7 +2,7 @@
 
 public class SumsFinder {
         
-        public int EvenSum(int[] array) {
+        public static int EvenSum(int[] array) {
 
         int sum = 0;
 
@@ -13,7 +13,7 @@ public class SumsFinder {
         return sum;
     }
 
-    public int OddSum(int[] array) {
+    public static int OddSum(int[] array) {
 
         int sum = 0;
 
@@ -24,4 +24,5 @@ public class SumsFinder {
         return sum;
     }
 
+//if there are problems with calculation, change i < array.length to i <= array.length
 }
